@@ -3,7 +3,7 @@
 
 ### 🏆 2026-10-27 · 1st place on the final private leaderboard!
 
-I used this skill in the **2026 AMA4602 Smart Coatings examination** and achieved **1st place on the final private leaderboard**, with a **private log loss of 0.09963**. The screenshot below shows the completed competition's final standings for **DU Haoqian Alex**.
+I used this skill in the **2026 AMA4602 Smart Coatings examination** and achieved **1st place on the final private leaderboard**, with a **private log loss of 0.09963**.
 
 ![Final private leaderboard: DU Haoqian Alex ranked first with a private log loss of 0.09963](rank.png)
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="510" viewBox="0 0 1100 510" role="img" aria-labelledby="title desc">
+<title id="title">AMA4602 skill workflow</title>
+<desc id="desc">The current brief becomes a task config, data audit, fold-safe models and run evidence. Evidence supports a validated prediction CSV and shared figures and Markdown for LaTeX, interactive HTML and Jupyter reports.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#A4A29A"/></marker></defs>
+<rect width="1100" height="510" rx="18" fill="#FAF9F5"/>
+<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+<rect x="20" y="24" width="180" height="108" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="110.0" y="49" fill="#A45A41" font-size="13" font-weight="700" letter-spacing="2">01</text>
+<text x="110.0" y="81" fill="#242421" font-size="20" font-weight="700">Brief &amp; rules</text>
+<text x="110.0" y="106" fill="#68675F" font-size="14">Current assessment</text>
+<path d="M 204 78 H 230" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="240" y="24" width="180" height="108" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="330.0" y="49" fill="#A45A41" font-size="13" font-weight="700" letter-spacing="2">02</text>
+<text x="330.0" y="81" fill="#242421" font-size="20" font-weight="700">Task config</text>
+<text x="330.0" y="106" fill="#68675F" font-size="14">Metric • IDs • deadline</text>
+<path d="M 424 78 H 450" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="460" y="24" width="180" height="108" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="550.0" y="49" fill="#A45A41" font-size="13" font-weight="700" letter-spacing="2">03</text>
+<text x="550.0" y="81" fill="#242421" font-size="20" font-weight="700">Data audit</text>
+<text x="550.0" y="106" fill="#68675F" font-size="14">Shape • types • alignment</text>
+<path d="M 644 78 H 670" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="680" y="24" width="180" height="108" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="770.0" y="49" fill="#A45A41" font-size="13" font-weight="700" letter-spacing="2">04</text>
+<text x="770.0" y="81" fill="#242421" font-size="20" font-weight="700">Fold-safe models</text>
+<text x="770.0" y="106" fill="#68675F" font-size="14">OOF • comparison • refit</text>
+<path d="M 864 78 H 890" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="900" y="24" width="180" height="108" rx="12" fill="#FBEDE7" stroke="#D97757" stroke-width="1.5"/>
+<text x="990.0" y="49" fill="#A45A41" font-size="13" font-weight="700" letter-spacing="2">05</text>
+<text x="990.0" y="81" fill="#242421" font-size="20" font-weight="700">Run evidence</text>
+<text x="990.0" y="106" fill="#68675F" font-size="14">Folds • scores • versions</text>
+<path d="M 990 132 V 174 H 220 V 220" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 990 174 H 750 V 220" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="50" y="220" width="340" height="96" rx="12" fill="#FBEDE7" stroke="#D97757" stroke-width="1.5"/>
+<text x="220.0" y="263" fill="#242421" font-size="22" font-weight="700">Validated prediction CSV</text>
+<text x="220.0" y="288" fill="#68675F" font-size="14">ID order • probabilities • identity</text>
+<rect x="500" y="220" width="500" height="96" rx="12" fill="#FBEDE7" stroke="#D97757" stroke-width="1.5"/>
+<text x="750.0" y="263" fill="#242421" font-size="22" font-weight="700">Figures + shared Markdown</text>
+<text x="750.0" y="288" fill="#68675F" font-size="14">Facts resolved from the completed run</text>
+<path d="M 750 316 V 348 H 545 V 382" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 750 348 H 755 V 382" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 750 348 H 965 V 382" fill="none" stroke="#A4A29A" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="440" y="382" width="210" height="92" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="545.0" y="425" fill="#242421" font-size="20" font-weight="700">NeurIPS LaTeX</text>
+<text x="545.0" y="450" fill="#68675F" font-size="14">.tex + optional PDF</text>
+<rect x="650" y="382" width="210" height="92" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="755.0" y="425" fill="#242421" font-size="20" font-weight="700">Interactive HTML</text>
+<text x="755.0" y="450" fill="#68675F" font-size="14">.html + embedded Plotly</text>
+<rect x="860" y="382" width="210" height="92" rx="12" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="1.5"/>
+<text x="965.0" y="425" fill="#242421" font-size="20" font-weight="700">Jupyter notebook</text>
+<text x="965.0" y="450" fill="#68675F" font-size="14">.ipynb + code &amp; outputs</text>
+</g></svg>

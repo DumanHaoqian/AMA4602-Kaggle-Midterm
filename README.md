@@ -251,18 +251,7 @@ The skill also draws on the documented validation, statistical-analysis, visuali
 <a id="how-it-works"></a>
 ## 🏗️ How the workflow works
 
-```mermaid
-flowchart TD
-    A["📋 Current brief, rules and data"] --> B["⚙️ Task contract and config"]
-    B --> C["🔎 Audit IDs, schema and measurements"]
-    C --> D["🧠 Frozen folds and fold-safe models"]
-    D --> E["🧾 OOF predictions and run evidence"]
-    E --> F["📮 Validate final prediction CSV"]
-    E --> G["🎨 Figures and evidence-backed Markdown"]
-    G --> H["📄 NeurIPS-style LaTeX / PDF"]
-    G --> I["🌐 Interactive HTML"]
-    G --> J["📓 Executed Jupyter notebook"]
-```
+![Workflow from the current brief through validation and run evidence to a prediction CSV and three report formats](assets/showcase/workflow.svg)
 
 | Layer | What it contributes |
 |---|---|

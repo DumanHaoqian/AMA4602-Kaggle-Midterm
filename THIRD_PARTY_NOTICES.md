@@ -33,6 +33,9 @@ are recorded in [the case study](references/smart-coatings-2026.md). These figur
 contain no visible student identifier and do not establish a private score or
 final competition rank.
 
+`assets/showcase/workflow.svg` is an original vector diagram of the shared skill
+architecture, distributed under the project's MIT license.
+
 ## NeurIPS 2026 formatting template
 
 Files: `assets/neurips_2026/neurips_2026.sty` and `neurips_2026.tex`.

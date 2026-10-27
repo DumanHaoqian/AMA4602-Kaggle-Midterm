@@ -69,3 +69,12 @@ package. Its upstream license notices remain in that distribution. The report
 also links to Google Fonts and KaTeX CDN assets; these assets are not vendored in
 the skill release. Custom fonts and mathematical typesetting need those network
 resources, while the embedded Plotly interactions work offline.
+
+## Final leaderboard screenshot
+
+`rank.png` is the maintainer-supplied screenshot of the completed 2026 Smart
+Coatings competition's final private standings. It records first place for
+DU Haoqian Alex with private log loss 0.09963, announced in the README on
+2026-10-27. The screenshot is included unchanged; its platform interface and
+branding remain attributable to Kaggle. It provides separate evidence from
+the four analytical figures in the author's report.

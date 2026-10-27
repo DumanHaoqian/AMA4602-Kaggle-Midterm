@@ -1,3 +1,16 @@
+<a id="news"></a>
+## 📰 News
+
+### 🏆 2026-10-27 · 1st place on the final private leaderboard!
+
+I used this skill in the **2026 AMA4602 Smart Coatings examination** and achieved **1st place on the final private leaderboard**, with a **private log loss of 0.09963**. The screenshot below shows the completed competition's final standings for **DU Haoqian Alex**.
+
+![Final private leaderboard: DU Haoqian Alex ranked first with a private log loss of 0.09963](rank.png)
+
+🔗 [Kaggle competition](https://www.kaggle.com/competitions/ama-4602-smart-coatings-statistical-challenge/overview) · [2026 case study](references/smart-coatings-2026.md)
+
+---
+
 <div align="center">
 
 # 🎓 AMA4602 Kaggle Midterm Skill
@@ -8,7 +21,7 @@
 
 📄 **LaTeX(NeurIPS Style)** · 🌐 **Interactive HTML** · 📓 **Jupyter with code & outputs**
 
-[🚀 Get started](#quick-start) · [🧰 Features](#features) · [📚 Exam archive](#exam-archive) · [🖼️ Gallery](#gallery) · [🏗️ How it works](#how-it-works)
+[📰 News](#news) · [🚀 Get started](#quick-start) · [🧰 Features](#features) · [📚 Exam archive](#exam-archive) · [🖼️ Gallery](#gallery) · [🏗️ How it works](#how-it-works)
 
 </div>
 
@@ -184,7 +197,7 @@ The final report records the following log-loss progression; lower is better. Th
 | Semi-supervised structured Gaussian EM | 0.3252 | 0.3098 |
 | Condition-modulated quadratic logistic | **0.1081** | **0.0813** |
 
-Model structure and hyperparameters were selected using CV, so the selected model's CV estimate is optimistic. The report does not establish a private score or final rank. See the [case study](references/smart-coatings-2026.md) for methods and limitations.
+Model structure and hyperparameters were selected using CV, so the selected model's CV estimate is optimistic. The table preserves the report's selection-CV and public results; the final private result is documented separately in [News](#news). See the [case study](references/smart-coatings-2026.md) for methods and limitations.
 
 </details>
 

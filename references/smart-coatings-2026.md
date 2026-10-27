@@ -165,9 +165,9 @@ is optimistic for the selected model. Exploratory figures drawn from all
 training rows must be interpreted separately from fold-internal evaluation.
 
 The public scores above are historical values recorded in the report, covering
-only the public test partition. The repository does not establish a private
-leaderboard score, final rank or a guaranteed score for a future run. A public
-score being lower than CV does not by itself identify the reason for the gap.
+only the public test partition. The final private outcome is documented separately
+below. These historical results do not guarantee a score for a future run. A
+public score being lower than CV does not by itself identify the reason for the gap.
 
 The Gaussian EM and condition-modulated quadratic models used task-specific
 analysis code. They are not model families in the shared baseline scripts, and
@@ -175,6 +175,15 @@ their custom evidence files are not directly interchangeable with the generic
 report builder's input schema. The case-study figures demonstrate the author's
 completed analysis; the current skill supplies the reusable audit, validation,
 baseline, plotting and reporting workflow.
+
+## Final private leaderboard result — 2026-10-27
+
+The maintainer used this skill in the 2026 AMA4602 Smart Coatings examination
+and finished **1st on the final private leaderboard**, with a **private log loss
+of 0.09963**. The supplied [final standings screenshot](../rank.png) shows the
+competition as completed, the Private leaderboard selected, and **DU Haoqian
+Alex** in first place. This private result is separate from the report's earlier
+selection-CV and public-score table.
 
 ## Source record
 

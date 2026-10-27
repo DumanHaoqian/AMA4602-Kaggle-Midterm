@@ -1,0 +1,50 @@
+{
+  "task": "classification",
+  "train_path": "data/train.csv",
+  "test_path": "data/test.csv",
+  "labels_path": null,
+  "target": "target",
+  "id_column": "id",
+  "label_id_column": null,
+  "drop_columns": [],
+  "feature_columns": null,
+  "allow_positional_labels": false,
+  "metric": "log_loss",
+  "positive_class": 1,
+  "target_transform": null,
+  "holdout": null,
+  "split": {
+    "method": "stratified",
+    "n_splits": 5,
+    "group_column": null,
+    "time_column": null,
+    "gap": 0
+  },
+  "sample_submission_path": "data/sample_submission.csv",
+  "submission_id_column": "id",
+  "prediction": {
+    "kind": "probability",
+    "columns": [
+      "target"
+    ],
+    "class_order": [
+      1
+    ]
+  },
+  "student_id": "",
+  "full_name": "",
+  "competition": "ama-4602-smart-coatings-statistical-challenge",
+  "deadline": null,
+  "required_outputs": [
+    "prediction_csv"
+  ],
+  "external_resources": "The 2026 brief allowed AI tools and unlabeled test measurements. Hidden labels must not be sought and specimen IDs must not be predictors. Verify the rules for any new assessment.",
+  "submission_limit": 5,
+  "seed": 42,
+  "threads": 2,
+  "budget_seconds": 600,
+  "output_dir": "artifacts",
+  "max_input_mib": 1024,
+  "historical_rehearsal_only": true,
+  "notes": "Historical 2026 Smart Coatings baseline configuration. Obtain the original NPZ archives and sample submission separately, then use scripts/prepare_smart_coatings.py to create this CSV layout. Fill in your own identity before export. The bundled baseline models do not reproduce the report's custom Gaussian EM or condition-modulated quadratic model."
+}

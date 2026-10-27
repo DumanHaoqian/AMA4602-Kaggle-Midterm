@@ -19,6 +19,7 @@ Rehearse offline with `scripts/create_demo.py --output-dir NEW_DIR`, or run `scr
 |---|---|
 | scripts/exam_io.py | Shared loading (ID-based label joins) and atomic writes |
 | scripts/profile_data.py | Bounded data audit for wide tables |
+| scripts/prepare_smart_coatings.py | Validated NPZ-to-CSV preparation for the historical 2026 Smart Coatings task |
 | scripts/evaluate_models.py | Fold-safe candidate comparison, OOF predictions, evidence, final refit |
 | scripts/leaderboard.py | Leaderboard mode: adversarial validation, mixed types, 10 model families, budgeted search, repeated CV, nested-CV blend, seed-averaged refit |
 | scripts/analyze_structure.py | Exploratory ANOVA/BH association screen and label-free PCA/k-means |
@@ -26,7 +27,8 @@ Rehearse offline with `scripts/create_demo.py --output-dir NEW_DIR`, or run `scr
 | scripts/viz_style.py | Single source of the figure style (palette, type, sizes, export) |
 | scripts/plot_results.py | Publication figures, captions and manifest from finished runs |
 | scripts/build_reports.py (+ report_source.py, report_html.py) | NeurIPS PDF, executed notebook and interactive HTML from one Markdown source |
-| assets/exam_config.example.json, assets/pancan_config.example.json | Config templates |
+| assets/exam_config.example.json, assets/pancan_config.example.json, assets/smart_coatings_2026_config.example.json | General and historical config templates |
+| assets/showcase/ | Original English figure examples from the author's final 2026 report |
 | assets/neurips_2026/ | NeurIPS 2026 style file and official template used for the PDF report |
 | assets/report_minimal.md | Prediction-only report source for any run (classification or regression, evaluate or leaderboard) |
 | assets/report_example.md | Full PANCAN-style report source (prediction + associations + clustering) to copy and rewrite |
@@ -102,6 +104,8 @@ The main agent owns the task contract, the clock, the frozen folds and the final
 ## 3. Data audit and script entry points
 
 Copy [exam_config.example.json](assets/exam_config.example.json) into the workspace and fill in the real fields from the brief. All paths resolve relative to that JSON file. The example values are not auto-detected. For numeric PANCAN practice see [pancan_config.example.json](assets/pancan_config.example.json).
+
+For the historical 2026 Smart Coatings probability task, read [smart-coatings-2026.md](references/smart-coatings-2026.md) and use [smart_coatings_2026_config.example.json](assets/smart_coatings_2026_config.example.json). Its original inputs are NPZ archives; `scripts/prepare_smart_coatings.py` validates and converts them into a new CSV workspace without fitting preprocessing or a model. The config is a baseline entry point. The report gallery's latent covariance, EM and condition-modulated quadratic models are task-specific extensions, not bundled generic model families. Historical permissions, metrics and scores do not define a new assessment.
 
 Run scripts/profile_data.py --config /absolute/path/config.json with the verified Python interpreter; do not assume the system python matches the notebook kernel.
 

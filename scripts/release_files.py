@@ -8,7 +8,7 @@ ROOT_FILES = (
 )
 TREES = {
     "agents": {".yaml"}, "scripts": {".py"}, "references": {".md"},
-    "assets": {".md", ".json", ".sty", ".tex"},
+    "assets": {".md", ".json", ".sty", ".tex", ".png"},
     ".github/workflows": {".yml", ".yaml"},
 }
 

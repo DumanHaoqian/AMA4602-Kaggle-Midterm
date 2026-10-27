@@ -6,7 +6,7 @@
 
 🧠 **Classification & regression** · 🔬 **Statistical analysis** · 🎨 **Scientific figures**
 
-📄 **LaTeX / NeurIPS** · 🌐 **Interactive HTML** · 📓 **Jupyter with code & outputs**
+📄 **LaTeX(NeurIPS Style)** · 🌐 **Interactive HTML** · 📓 **Jupyter with code & outputs**
 
 [🚀 Get started](#quick-start) · [🧰 Features](#features) · [📚 Exam archive](#exam-archive) · [🖼️ Gallery](#gallery) · [🏗️ How it works](#how-it-works)
 
@@ -193,7 +193,7 @@ Model structure and hyperparameters were selected using CV, so the selected mode
 <a id="report-modes"></a>
 ## 📄 One analysis, three report experiences
 
-| 📄 LaTeX / NeurIPS-style paper | 🌐 Interactive HTML report | 📓 Jupyter notebook with code |
+| 📄 LaTeX(NeurIPS Style) | 🌐 Interactive HTML report | 📓 Jupyter notebook with code |
 |---|---|---|
 | A `.tex` manuscript using the bundled NeurIPS style, with tables, vector figures, captions and references. Optional compilation produces a PDF. | A single HTML file with embedded Plotly charts, hover details, zoom controls, a contents sidebar and collapsible code blocks. | An `.ipynb` combining explanations, executable code, tables, figures and the outputs of the executed cells. |
 | Best for a written hand-in or paper-style presentation. | Best for exploring and sharing the analysis in a browser. | Best for teaching, inspection and reproducing the analysis steps. |

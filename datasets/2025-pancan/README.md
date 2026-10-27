@@ -2,8 +2,7 @@
 
 An archived AMA4602 task combining high-dimensional statistical analysis,
 unsupervised learning and multiclass prediction. The repository maintainer
-identifies these course files as the **2025 assessment**, the year before last
-relative to 2026. This year attribution comes from the supplied course context,
+identifies these course files as the **2025 assessment**. This year attribution comes from the supplied course context,
 not from file modification dates.
 
 The supplied description identifies the measurements as a subset of the

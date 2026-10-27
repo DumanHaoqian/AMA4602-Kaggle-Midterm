@@ -1,0 +1,41 @@
+{
+  "task": "classification",
+  "train_path": "data/data.csv",
+  "test_path": null,
+  "labels_path": "data/labels.csv",
+  "target": "Class",
+  "id_column": "Unnamed: 0",
+  "label_id_column": "Unnamed: 0",
+  "drop_columns": [
+    "Edema"
+  ],
+  "feature_columns": null,
+  "metric": "accuracy",
+  "positive_class": null,
+  "split": {
+    "method": "stratified",
+    "n_splits": 3,
+    "group_column": null,
+    "time_column": null,
+    "gap": 0
+  },
+  "sample_submission_path": null,
+  "submission_id_column": null,
+  "prediction": {
+    "kind": "label",
+    "columns": [
+      "Class"
+    ],
+    "class_order": null
+  },
+  "student_id": "",
+  "full_name": "",
+  "competition": "",
+  "seed": 42,
+  "threads": 2,
+  "budget_seconds": 600,
+  "output_dir": "pancan_artifacts",
+  "n_clusters": 5,
+  "historical_rehearsal_only": true,
+  "notes": "Historical labelled data have no Kaggle test/template here. Replace task/metric/schema from the actual exam before predicting or exporting."
+}

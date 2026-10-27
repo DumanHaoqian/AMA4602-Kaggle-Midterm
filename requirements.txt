@@ -1,0 +1,6 @@
+# Core modelling and local CSV validation. Python 3.10+.
+numpy>=1.24,<3
+pandas>=2.0,<4
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+threadpoolctl>=3.1,<4

@@ -1,0 +1,6 @@
+-r requirements.txt
+matplotlib>=3.8,<4
+nbformat>=5.9,<6
+nbclient>=0.9,<1
+ipykernel>=6.25,<8
+plotly>=5.18,<8

@@ -1,0 +1,46 @@
+{
+  "task": "classification",
+  "train_path": "data/train.csv",
+  "test_path": "data/test.csv",
+  "labels_path": null,
+  "target": "REPLACE_WITH_TARGET",
+  "id_column": "REPLACE_WITH_ID",
+  "label_id_column": null,
+  "drop_columns": [],
+  "feature_columns": null,
+  "allow_positional_labels": false,
+  "metric": "REPLACE_WITH_OFFICIAL_METRIC",
+  "positive_class": null,
+  "target_transform": null,
+  "holdout": null,
+  "split": {
+    "method": "stratified",
+    "n_splits": 3,
+    "group_column": null,
+    "time_column": null,
+    "gap": 0
+  },
+  "sample_submission_path": "data/sample_submission.csv",
+  "submission_id_column": "REPLACE_WITH_TEMPLATE_ID",
+  "prediction": {
+    "kind": "label",
+    "columns": [
+      "REPLACE_WITH_PREDICTION_COLUMN"
+    ],
+    "class_order": null
+  },
+  "student_id": "",
+  "full_name": "",
+  "competition": "",
+  "deadline": null,
+  "required_outputs": [
+    "prediction_csv"
+  ],
+  "external_resources": "unknown",
+  "submission_limit": null,
+  "seed": 42,
+  "threads": 2,
+  "budget_seconds": 600,
+  "output_dir": "artifacts",
+  "max_input_mib": 1024
+}

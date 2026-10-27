@@ -1,0 +1,2 @@
+-r requirements-reports.txt
+PyYAML>=6.0,<7

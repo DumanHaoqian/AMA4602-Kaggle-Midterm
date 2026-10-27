@@ -1,0 +1,37 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+# Credentials and personal settings
+.env
+.env.*
+!.env.example
+kaggle.json
+.kaggle/
+# Exam inputs, personal configs and generated outputs
+/data/
+/demo/
+/artifacts/
+/pancan_artifacts/
+/final/
+/reports/
+/dist/
+/config.json
+/task_contract.md
+/submissions_log.csv
+*.csv
+*.tsv
+*.parquet
+*.pkl
+*.joblib
+*.zip
+*.pdf
+*.ipynb
+*.log
+*.aux
+*.out
+*.synctex.gz

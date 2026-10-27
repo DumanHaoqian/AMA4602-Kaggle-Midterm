@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve third-party template bytes and original whitespace.
+assets/neurips_2026/* -text -whitespace

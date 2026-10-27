@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMA4602 Kaggle Exam"
+  short_description: "Timed data analysis with validated Kaggle predictions"
+  default_prompt: "Use $ama4602-kaggle-exam to read my exam brief and data, build a leakage-safe model, and prepare validated Kaggle predictions within the remaining time."

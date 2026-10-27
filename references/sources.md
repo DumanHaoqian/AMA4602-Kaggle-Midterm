@@ -4,6 +4,18 @@ Use this reference to audit provenance or update the workflow. Do not load all u
 
 ## Inspected upstream versions
 
+### Winning Kaggle tabular notebooks
+
+The maintainer describes the skill's development as downloading and reviewing
+winning notebooks from multiple Kaggle tabular competitions, then summarizing
+recurring patterns in validation, preprocessing, feature engineering, model
+diversity, ensembling and submission practice. These lessons are adapted to a
+time-bounded assessment rather than treated as a fixed recipe for every task.
+The implementation and historical case studies provide the runnable examples;
+the versioned references below record additional workflow sources.
+
+### Workflow and implementation references
+
 | Repository | Pinned commit | Inspected material and license |
 |---|---|---|
 | K-Dense-AI/scientific-agent-skills | 5f2bc0341354fd5590aef76a533ada1e1e5b4e62 | EDA, scikit-learn, statistical-analysis and scientific-visualization skills. Root LICENSE.md MIT; the scikit-learn skill declares BSD-3-Clause, so do not assume one license covers every copied component. |

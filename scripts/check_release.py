@@ -43,7 +43,8 @@ def main() -> int:
         interface = yaml.safe_load((root / "agents/openai.yaml").read_text(encoding="utf-8"))["interface"]
         if f"${SKILL_NAME}" not in interface.get("default_prompt", ""):
             raise ValueError("The default prompt must invoke the skill by name.")
-        for relative in files:
+        dataset_guides = sorted(path.relative_to(root) for path in (root / "datasets").glob("*/README.md"))
+        for relative in files + dataset_guides:
             path = root / relative
             if path.suffix == ".py":
                 tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(relative), feature_version=(3, 10))
@@ -62,7 +63,9 @@ def main() -> int:
                 yaml.safe_load(path.read_text(encoding="utf-8"))
             elif path.suffix == ".md":
                 text = path.read_text(encoding="utf-8")
-                for target in re.findall(r"\]\(([^\s)]+)\)", text):
+                targets = re.findall(r"\]\(([^\s)]+)\)", text)
+                targets += re.findall(r'''(?:href|src)=["']([^"']+)["']''', text, re.I)
+                for target in targets:
                     target = unquote(target.split("#", 1)[0]).strip("<>")
                     if not target or "://" in target or target.startswith("mailto:"):
                         continue
@@ -92,7 +95,7 @@ def main() -> int:
                 expected = {f"{SKILL_NAME}/{p.as_posix()}" for p in files}
                 if set(bundle.namelist()) != expected:
                     raise ValueError("ZIP inventory differs from the release inventory.")
-                forbidden = {".git", ".venv", "data", "dist", "__pycache__"}
+                forbidden = {".git", ".venv", "data", "datasets", "dist", "__pycache__"}
                 if any(forbidden.intersection(Path(name).parts) for name in bundle.namelist()):
                     raise ValueError("ZIP contains local data, an environment or build output.")
                 if bundle.read(f"{SKILL_NAME}/SKILL.md") != (root / "SKILL.md").read_bytes():

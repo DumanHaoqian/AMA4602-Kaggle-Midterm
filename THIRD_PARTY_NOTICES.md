@@ -3,6 +3,36 @@
 Original scripts, skill instructions and project documentation are licensed under
 [MIT](LICENSE). Third-party materials retain their own terms.
 
+## Historical teaching datasets
+
+`datasets/2024-pancan/` contains the user-supplied Gene/PANCAN teaching table
+(losslessly compressed) and its labels. The accompanying course description
+identifies the measurements as a subset of TCGA PANCAN RNA-Seq data with an
+additional Edema variable. The dataset README distinguishes the original task
+from the skill's recommended analysis choices.
+
+`datasets/2026-smart-coatings/` contains the original synthetic training and test
+archives and sample submission for the AMA4602 Smart Coatings Statistical
+Challenge. Source: [the Kaggle competition](https://www.kaggle.com/competitions/ama-4602-smart-coatings-statistical-challenge/overview)
+and its downloaded challenge materials.
+
+These data are shared as historical teaching materials at the maintainer's
+request. The project's MIT license does not relicense the underlying dataset
+materials. Their provenance and historical use conditions are recorded in each
+dataset README. Dataset files are excluded from the lightweight skill ZIP and
+installed skill. The shared archive does not include other students' reports or
+the author's personal identity configuration and prediction submissions.
+
+## Author's report figures
+
+The four PNG files in `assets/showcase/` are unchanged copies of figures from
+Haoqian Du's final 2026 report, *Hidden Contrasts: Condition-Modulated Quadratic
+Discrimination for Smart-Coating Qualification*. They are shared by the author
+as examples of the historical analysis. Figure mapping and analytical scope
+are recorded in [the case study](references/smart-coatings-2026.md). These figures
+contain no visible student identifier and do not establish a private score or
+final competition rank.
+
 ## NeurIPS 2026 formatting template
 
 Files: `assets/neurips_2026/neurips_2026.sty` and `neurips_2026.tex`.

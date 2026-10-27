@@ -200,5 +200,5 @@ analysis results, including `report_numbers.json`, `paper_v4_numbers.json` and
 the final condition-modulated model's `evidence.json`. The older short report
 describes v3 and is superseded by the final v4 report for this case study.
 
-The separate [PANCAN rehearsal](pancan-reference.md) is archived as the 2024
+The separate [PANCAN rehearsal](pancan-reference.md) is archived as the 2025
 exercise according to the maintainer's identification of the supplied files.

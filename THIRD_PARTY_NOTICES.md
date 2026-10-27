@@ -5,7 +5,7 @@ Original scripts, skill instructions and project documentation are licensed unde
 
 ## Historical teaching datasets
 
-`datasets/2024-pancan/` contains the user-supplied Gene/PANCAN teaching table
+`datasets/2025-pancan/` contains the user-supplied Gene/PANCAN teaching table
 (losslessly compressed) and its labels. The accompanying course description
 identifies the measurements as a subset of TCGA PANCAN RNA-Seq data with an
 additional Edema variable. The dataset README distinguishes the original task

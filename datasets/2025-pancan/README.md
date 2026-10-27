@@ -1,8 +1,8 @@
-# 2024 · PANCAN RNA-Seq analysis
+# 2025 · PANCAN RNA-Seq analysis
 
 An archived AMA4602 task combining high-dimensional statistical analysis,
 unsupervised learning and multiclass prediction. The repository maintainer
-identifies these course files as the **2024 assessment**, the year before last
+identifies these course files as the **2025 assessment**, the year before last
 relative to 2026. This year attribution comes from the supplied course context,
 not from file modification dates.
 
@@ -103,7 +103,7 @@ including on Windows. `pancan-practice` must not already exist.
 python -c "from pathlib import Path
 import gzip
 import shutil
-source = Path('datasets/2024-pancan')
+source = Path('datasets/2025-pancan')
 workspace = Path('pancan-practice')
 workspace.mkdir()
 (workspace / 'data').mkdir()

@@ -18,7 +18,7 @@
 
 This repository turns lessons from winning Kaggle tabular notebooks and real AMA4602 assessments into a reusable agent workflow. Give your agent the current brief, data and time budget; it can audit the inputs, compare models with fold-safe validation, prepare an identity-correct prediction file, and explain the results through figures and reports.
 
-The repository also preserves **two teaching datasets with their own English task guides**: the **2024 Gene/PANCAN exercise** and the **2026 Smart Coatings challenge**. The current assessment's rules always define what you may use and what you must submit.
+The repository also preserves **two teaching datasets with their own English task guides**: the **2025 Gene/PANCAN exercise** and the **2026 Smart Coatings challenge**. The current assessment's rules always define what you may use and what you must submit.
 
 <a id="contents"></a>
 ## 🧭 Explore the repository
@@ -122,7 +122,7 @@ The demo produces `DEMO0000_Demo_Student.csv` and a local receipt using fictiona
 
 | Archive | What the data describe | What students were asked to do | Data and task guide | Skill config |
 |---|---|---|---|---|
-| 🧬 **2024 · Gene / PANCAN** | 801 labelled specimens, 20,531 anonymous gene features and an Edema variable | Study associations, explore clusters, reduce dimensionality, compare tumour classifiers, and explain reproducible results | [Dataset + task](https://github.com/DumanHaoqian/AMA4602-Kaggle-Midterm/tree/main/datasets/2024-pancan) | [PANCAN config](assets/pancan_config.example.json) |
+| 🧬 **2025 · Gene / PANCAN** | 801 labelled specimens, 20,531 anonymous gene features and an Edema variable | Study associations, explore clusters, reduce dimensionality, compare tumour classifiers, and explain reproducible results | [Dataset + task](https://github.com/DumanHaoqian/AMA4602-Kaggle-Midterm/tree/main/datasets/2025-pancan) | [PANCAN config](assets/pancan_config.example.json) |
 | 🧪 **2026 · Smart Coatings** | 12,000 training and 6,000 test specimens; six process conditions and 2,042 scan channels | Predict qualification probabilities, scored by binary log loss; export exactly `id,target` | [Dataset + task](https://github.com/DumanHaoqian/AMA4602-Kaggle-Midterm/tree/main/datasets/2026-smart-coatings) | [2026 config](assets/smart_coatings_2026_config.example.json) |
 
 🔗 **Original competition:** [AMA4602 Smart Coatings Statistical Challenge on Kaggle](https://www.kaggle.com/competitions/ama-4602-smart-coatings-statistical-challenge/overview).
@@ -302,7 +302,7 @@ AMA4602-Kaggle-Midterm/
 │   ├── neurips_2026/                📄 Paper formatting assets
 │   └── showcase/                    🖼️ Figures from the final 2026 report
 ├── datasets/
-│   ├── 2024-pancan/                 🧬 Compressed table, labels and task README
+│   ├── 2025-pancan/                 🧬 Compressed table, labels and task README
 │   └── 2026-smart-coatings/          🧪 Original NPZ files, sample CSV and task README
 └── .github/workflows/               ✅ Automated checks and packaging
 ```

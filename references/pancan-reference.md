@@ -1,5 +1,11 @@
 # Historical PANCAN rehearsal, not the 2026 task contract
 
+The maintainer identifies the supplied Gene/PANCAN files as the 2024 exercise.
+The [dataset archive and task guide](https://github.com/DumanHaoqian/AMA4602-Kaggle-Midterm/tree/main/datasets/2024-pancan)
+include the losslessly compressed feature table and original labels. Dataset
+files are available in the GitHub repository and excluded from the lightweight
+skill ZIP and installed skill.
+
 Use these facts only when the supplied files match the historical exercise. Do not assume this year's task has the same target, metric, classes, columns or report requirements.
 
 ## Data supplied in the historical exercise

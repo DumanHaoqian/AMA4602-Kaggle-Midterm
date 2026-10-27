@@ -19,6 +19,7 @@ kaggle.json
 /pancan_artifacts/
 /final/
 /reports/
+/workspaces/
 /dist/
 /config.json
 /task_contract.md
@@ -35,3 +36,6 @@ kaggle.json
 *.aux
 *.out
 *.synctex.gz
+# Explicitly shared historical dataset tables; other CSVs remain ignored.
+!/datasets/2024-pancan/labels.csv
+!/datasets/2026-smart-coatings/sample_submission.csv

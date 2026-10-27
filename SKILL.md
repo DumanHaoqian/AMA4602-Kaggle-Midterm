@@ -9,9 +9,9 @@ Turn the latest brief, the marking rules and the remaining time into an executab
 
 ## Portable setup
 
-Read [README.md](README.md) when installing, preparing dependencies or rehearsing. Use Python 3.10+ and a verified virtual environment: `requirements.txt` is the core; `requirements-reports.txt` adds figures/reports; `requirements-boosting.txt` adds optional tree libraries. Install during preparation, not mid-exam. No upstream skills, personal workspace rules, global notebook kernel or Kaggle credentials are required for local modelling. Take identity from the current user/config; an AGENTS.md identity section is optional.
+Read [README.md](README.md) when installing, preparing dependencies or rehearsing. Use Python 3.10+ and a verified virtual environment. One `pip install -r requirements.txt` installs all Python dependencies for modelling, boosting libraries, figures, reports and release checks. Tectonic for PDF compilation and the Kaggle CLI for platform operations remain separate tools. Install during preparation, not mid-exam. No upstream skills, personal workspace rules, global notebook kernel or Kaggle credentials are required for local modelling. Take identity from the current user/config; an AGENTS.md identity section is optional.
 
-Rehearse offline with `scripts/create_demo.py --output-dir NEW_DIR`, or run `scripts/smoke_test.py` (add `--reports` with report dependencies). The demo identity is fictional and must never be uploaded. Record source paths, sizes, configuration, shapes, versions and saved row IDs/fold indices; do not compute content hashes or SHA/SHA256 checks.
+Rehearse offline with `scripts/create_demo.py --output-dir NEW_DIR`, or run `scripts/smoke_test.py` (add `--reports` to check figures and reports). The demo identity is fictional and must never be uploaded. Record source paths, sizes, configuration, shapes, versions and saved row IDs/fold indices; do not compute content hashes or SHA/SHA256 checks.
 
 ## Bundled files
 

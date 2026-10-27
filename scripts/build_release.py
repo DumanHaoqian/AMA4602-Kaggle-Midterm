@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a versioned skill ZIP from the explicit release inventory."""
+"""Build a skill ZIP, optionally named with a supplied release version."""
 from __future__ import annotations
 
 import argparse
@@ -16,17 +16,19 @@ def main() -> int:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=root / "dist")
+    parser.add_argument("--version", help="Optional release version or tag, e.g. 0.1.0 or v0.1.0.")
     args = parser.parse_args()
     archive = None
     created = False
     try:
-        version = (root / "VERSION").read_text(encoding="utf-8").strip()
-        if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[a-z0-9.]+)?", version):
-            raise ValueError("VERSION must contain a semantic version, e.g. 0.1.0.")
+        version = args.version.removeprefix("v") if args.version is not None else None
+        if version is not None and not re.fullmatch(r"\d+\.\d+\.\d+(?:-[a-z0-9.]+)?", version):
+            raise ValueError("--version must be a semantic version or tag, e.g. 0.1.0 or v0.1.0.")
         files = payload_files(root)
         output = args.output_dir.expanduser().resolve()
         output.mkdir(parents=True, exist_ok=True)
-        archive = output / f"{SKILL_NAME}-v{version}.zip"
+        suffix = f"-v{version}" if version is not None else ""
+        archive = output / f"{SKILL_NAME}{suffix}.zip"
         with zipfile.ZipFile(archive, "x", compression=zipfile.ZIP_DEFLATED) as bundle:
             created = True
             for relative in files:

@@ -3,10 +3,8 @@ from pathlib import Path
 
 SKILL_NAME = "ama4602-kaggle-exam"
 ROOT_FILES = (
-    "SKILL.md", "README.md", "VERSION", "LICENSE", "THIRD_PARTY_NOTICES.md",
-    "CHANGELOG.md", "CONTRIBUTING.md", ".gitignore", ".gitattributes",
-    "requirements.txt", "requirements-reports.txt", "requirements-boosting.txt",
-    "requirements-dev.txt",
+    "SKILL.md", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
+    ".gitignore", ".gitattributes", "requirements.txt",
 )
 TREES = {
     "agents": {".yaml"}, "scripts": {".py"}, "references": {".md"},

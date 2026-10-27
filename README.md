@@ -2,7 +2,7 @@
 
 把「读题 → 数据检查 → 防泄漏验证 → 建模 → CSV 校验 → 报告」变成可复用的 AI agent skill，供 AMA4602 同学备考和在课程明确允许的场景中使用。
 
-**当前版本：0.1.0。** 仓库根目录就是 `ama4602-kaggle-exam` skill；只需一个副本，无须安装上游 skills。2026 考试安排和 PANCAN 内容是历史背景，实际任务、身份、截止时间和使用规则以当年的题目为准。
+仓库根目录就是 `ama4602-kaggle-exam` skill；只需一个副本，无须安装上游 skills。2026 考试安排和 PANCAN 内容是历史背景，实际任务、身份、截止时间和使用规则以当年的题目为准。
 
 ## 1. 下载与安装
 
@@ -46,18 +46,14 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-以下命令均以这个虚拟环境为例。告诉 agent 使用虚拟环境里的解释器，并加 `-B`；无需向全局 Python 安装依赖。
+一次 `pip install -r requirements.txt` 包含全部 Python 功能：数据检查、建模、LightGBM / XGBoost / CatBoost、CSV 校验、图表、HTML、LaTeX 源码、执行 Jupyter 报告，以及发布检查。以下命令均以这个虚拟环境为例。告诉 agent 使用虚拟环境里的解释器，并加 `-B`；无需向全局 Python 安装依赖。
 
-| 需要的功能 | 额外安装 |
+| 独立工具 | 安装与准备 |
 |---|---|
-| 数据检查、数值基线、混合表线性模型、CSV 校验 | `requirements.txt` 已足够 |
-| 图表、HTML、LaTeX 源码、执行 Jupyter 报告 | `.venv/bin/python -m pip install -r requirements-reports.txt` |
-| LightGBM / XGBoost / CatBoost | `.venv/bin/python -m pip install -r requirements-boosting.txt` |
-| 维护仓库、运行静态发布检查 | `.venv/bin/python -m pip install -r requirements-dev.txt` |
 | 编译 PDF | 另装 [Tectonic](https://tectonic-typesetting.github.io/)，首次编译需联网下载 LaTeX 包 |
 | Kaggle 下载 / 上传 | 另装官方 Kaggle CLI，并自行在本机完成认证；先查看安装版本的 `--help` |
 
-macOS 上的 boosting 库可能另需 OpenMP 运行库；基础功能可以先不装 boosting。没有可选库时，leaderboard 会记录跳过的模型，缺 LightGBM 时跳过对抗验证。实际执行情况以 `evidence.json` 为准。
+macOS 上的 boosting 库可能另需 OpenMP 运行库；若某个库在当前机器上无法加载，leaderboard 会记录跳过的模型，缺 LightGBM 时跳过对抗验证。实际执行情况以 `evidence.json` 为准。
 
 依赖文件给出兼容范围，并非锁定环境；每次运行会记录实际版本。不要在正式限时考试中临时升级环境。
 
@@ -83,7 +79,7 @@ macOS 上的 boosting 库可能另需 OpenMP 运行库；基础功能可以先�
 
 ```sh
 .venv/bin/python -B scripts/smoke_test.py
-# 已装报告依赖时，加上图表、HTML、执行 notebook 和 LaTeX 源码检查：
+# 加上图表、HTML、执行 notebook 和 LaTeX 源码检查：
 .venv/bin/python -B scripts/smoke_test.py --reports
 ```
 
@@ -107,13 +103,13 @@ macOS 上的 boosting 库可能另需 OpenMP 运行库；基础功能可以先�
 .venv/bin/python -B scripts/leaderboard.py --config /absolute/exam/config.json --families logreg_l2 --max-trials 1 --repeats 1 --seeds 1 --no-adversarial --budget-seconds 90
 ```
 
-上面是分类的基础安装示例；回归可把 family 换成 `ridge`。完整候选、指标和任务流程见 [SKILL.md](SKILL.md) 与 [references/leaderboard.md](references/leaderboard.md)。预算只在模型拟合边界检查，无法中断已开始的一次拟合，要给最终预测和提交留出时间。
+上面是分类的快速基线示例；回归可把 family 换成 `ridge`。完整候选、指标和任务流程见 [SKILL.md](SKILL.md) 与 [references/leaderboard.md](references/leaderboard.md)。预算只在模型拟合边界检查，无法中断已开始的一次拟合，要给最终预测和提交留出时间。
 
 `validate_submission.py` **只校验本地文件**。Kaggle 上传须在当前用户授权、比赛规则允许且认证可用时另外执行；本地校验通过不等于平台已经收分。不要把 `kaggle.json`、token、真实身份配置、课程数据或作答结果提交到本仓库。
 
 ## 5. 图表与报告
 
-先安装报告依赖。`plot_results.py --run RUN_DIR` 从已完成的结果生成图，不重新训练。复制 `assets/report_minimal.md` 到考试工作目录，填入身份和当前 run/config 路径，重写说明并替换所有 `REPLACE_` 标记，然后：
+`requirements.txt` 已包含报告所需的 Python 依赖。`plot_results.py --run RUN_DIR` 从已完成的结果生成图，不重新训练。复制 `assets/report_minimal.md` 到考试工作目录，填入身份和当前 run/config 路径，重写说明并替换所有 `REPLACE_` 标记，然后：
 
 ```sh
 .venv/bin/python -B scripts/build_reports.py --source /absolute/exam/reports/report.md --formats tex,html,ipynb --no-compile
@@ -123,7 +119,7 @@ macOS 上的 boosting 库可能另需 OpenMP 运行库；基础功能可以先�
 
 ## 6. 发布与贡献
 
-维护步骤见 [CONTRIBUTING.md](CONTRIBUTING.md)。发布前运行：
+贡献时使用合成数据，不要提交课程输入、真实身份、凭据或作答结果。发布前运行：
 
 ```sh
 .venv/bin/python -B scripts/check_release.py
@@ -131,6 +127,8 @@ macOS 上的 boosting 库可能另需 OpenMP 运行库；基础功能可以先�
 .venv/bin/python -B scripts/build_release.py
 ```
 
-生成 `dist/ama4602-kaggle-exam-v0.1.0.zip`，内部只有一个 `ama4602-kaggle-exam/` skill 文件夹。打包采用明确的文件清单，排除数据、输出、环境与凭据；不计算文件摘要。GitHub Actions 会在 push / PR 时检查，在 `v*` tag 时额外生成可下载的构建 artifact；**不会自动创建公开 GitHub Release**。维护者可将 ZIP 附加到 Release。
+默认生成 `dist/ama4602-kaggle-exam.zip`，内部只有一个 `ama4602-kaggle-exam/` skill 文件夹。需要带版本的文件名时，可运行 `.venv/bin/python -B scripts/build_release.py --version 0.1.0`。打包采用明确的文件清单，排除数据、输出、环境与凭据；不计算文件摘要。
+
+GitHub Actions 会在 push / PR 时检查，在 `v*` tag 时将标签名传给 `--version`，额外生成可下载的构建 artifact；**不会自动创建公开 GitHub Release**。维护者可创建 Release 并附加 ZIP。已在 macOS / Python 3.13 检查；Linux / Python 3.10 与 3.13 的执行检查已配置于 CI，推送后应确认结果；Windows 尚未实测。
 
 原创部分采用 [MIT](LICENSE)。NeurIPS 模板保留独立署名和许可，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；方法参考见 [sources.md](references/sources.md)。本项目为同学间的学习工具，与 PolyU、Kaggle、NeurIPS 无官方隶属关系。

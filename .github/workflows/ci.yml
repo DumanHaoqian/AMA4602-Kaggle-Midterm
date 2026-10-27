@@ -21,20 +21,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install development dependencies
-        run: python -m pip install -r requirements-dev.txt
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
       - name: Check skill and packaging
         run: python -B scripts/check_release.py
       - name: Run offline synthetic rehearsal
         run: python -B scripts/smoke_test.py --reports
-      - name: Check release version
-        if: startsWith(github.ref, 'refs/tags/')
-        env:
-          RELEASE_TAG: ${{ github.ref_name }}
-        run: python -c 'import os,pathlib; assert os.environ["RELEASE_TAG"] == "v" + pathlib.Path("VERSION").read_text().strip(), "Tag must match VERSION"'
       - name: Build skill ZIP
         if: startsWith(github.ref, 'refs/tags/') && matrix.python-version == '3.13'
-        run: python -B scripts/build_release.py
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: python -B scripts/build_release.py --version "$RELEASE_TAG"
       - uses: actions/upload-artifact@v4
         if: startsWith(github.ref, 'refs/tags/') && matrix.python-version == '3.13'
         with:
